@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../libs/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../libs/qunit/qunit-1.18.0.css"></head>
+	<script src="../libs/jquery.min.js"></script>
+	<script src="../libs/jquery.storageapi.min.js"></script>
+	<script src="../libs/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../libs/plugin/jquery.validate.min.js"></script>
+    <script src="../libs/plugin/jquery.form.min.js"></script>
+    <script src="../libs/plugin/jquery.metadata.js"></script>
+    <script src="../libs/plugin/localization/messages_zh.min.js"></script>
+    <script src="calculator.js"></script>
+    <title>calculator</title>
+</head>
+<body>
+<div data-role="page" class="ui-page-theme-a" id="pgUserHome" data-title="计算器`">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>计算器</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+		<div id="display" class="ui-bar ui-bar-a ui-corner-all" style="height:60px">0</div>
+		<div class="ui-grid-c">
+		    <div class="ui-block-a"><a id="AC" class="ui-bar ui-bar-a" style="height:60px">AC</a></div>
+		    <div class="ui-block-b"><a id="C" class="ui-bar ui-bar-a" style="height:60px">C</a></div>
+		    <div class="ui-block-c"><a class="ui-bar ui-bar-a" style="height:60px"></a></div>
+		    <div class="ui-block-d"><a id="divide" class="ui-bar ui-bar-a" style="height:60px">/</a></div>
+		</div>
+		<div class="ui-grid-c">
+		    <div class="ui-block-a"><a id="7" class="ui-bar ui-bar-a" style="height:60px">7</a></div>
+		    <div class="ui-block-b"><a id="8" class="ui-bar ui-bar-a" style="height:60px">8</a></div>
+		    <div class="ui-block-c"><a id="9" class="ui-bar ui-bar-a" style="height:60px">9</a></div>
+		    <div class="ui-block-d"><a id="multiply" class="ui-bar ui-bar-a" style="height:60px">X</a></div>
+		</div>
+		<div class="ui-grid-c">
+		    <div class="ui-block-a"><a id="4" class="ui-bar ui-bar-a" style="height:60px">4</a></div>
+		    <div class="ui-block-b"><a id="5" class="ui-bar ui-bar-a" style="height:60px">5</a></div>
+		    <div class="ui-block-c"><a id="6" class="ui-bar ui-bar-a" style="height:60px">6</a></div>
+		    <div class="ui-block-d"><a id="minus" class="ui-bar ui-bar-a" style="height:60px">-</a></div>
+		</div>
+		<div class="ui-grid-c">
+		    <div class="ui-block-a"><a id="1" class="ui-bar ui-bar-a" style="height:60px">1</a></div>
+		    <div class="ui-block-b"><a id="2" class="ui-bar ui-bar-a" style="height:60px">2</a></div>
+		    <div class="ui-block-c"><a id="3" class="ui-bar ui-bar-a" style="height:60px">3</a></div>
+		    <div class="ui-block-d"><a id="plus" class="ui-bar ui-bar-a" style="height:60px">+</a></div>
+		</div>
+		<div class="ui-grid-c">
+		    <div class="ui-block-a"><a id="0" class="ui-bar ui-bar-a" style="height:60px">0</a></div>
+		    <div class="ui-block-b"><a id="dot" class="ui-bar ui-bar-a" style="height:60px">.</a></div>
+		    <div class="ui-block-c"><a class="ui-bar ui-bar-a" style="height:60px"></a></div>
+		    <div class="ui-block-d"><a id="equal" class="ui-bar ui-bar-a" style="height:60px">=</a></div>
+		</div>
+	</div>
+  <div data-role="footer" data-position="fixed" data-theme="a">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#pgUserHome" data-prefetch="true" data-transition="flip">应用</a></li>
+        <li><a href="#pgTestHome" data-prefetch="true" data-transition="flip">测试</a></li>
+      </ul>
+    </div>
+  </div>
+	
+</div>
+<div data-role="page" class="ui-page-theme-a" id="pgTestHome" data-title="测试">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>测试</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+	  <div id="qunit"></div>
+	  <div id="qunit-fixture"></div>
+	</div>
+  <div data-role="footer" data-position="fixed" data-theme="a">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#pgUserHome" data-prefetch="true" data-transition="flip">应用</a></li>
+        <li><a href="#pgTestHome" data-prefetch="true" data-transition="flip">测试</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+  <script src="../libs/qunit/qunit-1.18.0.js"></script>
+  <script src="calcTest.js"></script>
+</html>
